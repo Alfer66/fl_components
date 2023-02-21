@@ -1,1 +1,1 @@
-export 'package:proyec2/models/menu_options.dart';
+export 'package:fl_components/models/menu_options.dart';

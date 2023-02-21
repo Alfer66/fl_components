@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:proyec2/router/app_routes.dart';
-import 'package:proyec2/theme/app_theme.dart';
+import 'package:fl_components/router/app_routes.dart';
+import 'package:fl_components/theme/app_theme.dart';
 
 // import 'package:fl_components/screens/listview1_screen.dart';
 // import 'package:fl_components/screens/listview2_screen.dart';

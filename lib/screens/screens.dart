@@ -1,7 +1,7 @@
-import 'package:proyec2/screens/home_screen.dart';
+// import 'package:fl_components/screens/home_screen.dart';
 
-export 'package:proyec2/screens/listview1_screen.dart';
-export 'package:proyec2/screens/listview2_screen.dart';
-export 'package:proyec2/screens/alert_screen.dart';
-export 'package:proyec2/screens/card_screen.dart';
-export 'package:proyec2/screens/home_screen.dart';
+export 'package:fl_components/screens/listview1_screen.dart';
+export 'package:fl_components/screens/listview2_screen.dart';
+export 'package:fl_components/screens/alert_screen.dart';
+export 'package:fl_components/screens/card_screen.dart';
+export 'package:fl_components/screens/home_screen.dart';

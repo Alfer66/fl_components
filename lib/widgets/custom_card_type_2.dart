@@ -1,18 +1,34 @@
+import 'package:fl_components/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class CustomCartType2 extends StatelessWidget {
-  const CustomCartType2({Key? key}) : super(key: key);
+  final String imageUrl;
+  final String? name;
+
+  const CustomCartType2({Key? key, required this.imageUrl, this.name})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 10,
-      child: Column(children: const [
+      clipBehavior: Clip.antiAlias,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
+      elevation: 30,
+      shadowColor: AppTheme.primary.withOpacity(0.5),
+      child: Column(children: [
         FadeInImage(
-          image: NetworkImage(
-              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZewty1NmAVRuskz9q1iar_NuIo-7MB-_IJw&usqp=CAU'),
-          placeholder: null,
-        )
+          image: NetworkImage(imageUrl),
+          placeholder: const AssetImage('assets/jar-loading.gif'),
+          width: double.infinity,
+          height: 230,
+          fit: BoxFit.cover,
+          fadeInDuration: const Duration(milliseconds: 300),
+        ),
+        if (name != null)
+          Container(
+              alignment: AlignmentDirectional.bottomEnd,
+              padding: const EdgeInsets.only(right: 20, top: 10, bottom: 10),
+              child: Text(name ?? 'No Title'))
       ]),
     );
   }

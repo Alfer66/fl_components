@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:proyec2/models/models.dart';
-import 'package:proyec2/screens/screens.dart';
+import 'package:fl_components/models/models.dart';
+import 'package:fl_components/screens/screens.dart';
 
 class AppRoutes {
   static const initialRoute = "home";
