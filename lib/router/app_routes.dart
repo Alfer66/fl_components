@@ -32,7 +32,17 @@ class AppRoutes {
         route: 'card',
         name: 'Tarjetas - Cards',
         screen: const CardScreen(),
-        icon: Icons.credit_card)
+        icon: Icons.credit_card),
+    MenuOptions(
+        route: 'avatar',
+        name: 'Circle Avatar',
+        screen: const AvatarScreen(),
+        icon: Icons.supervised_user_circle_outlined),
+    MenuOptions(
+        route: 'animated',
+        name: 'Animated Container',
+        screen: const AnimatedScreen(),
+        icon: Icons.play_circle_outline_rounded),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
