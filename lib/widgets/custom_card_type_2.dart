@@ -18,7 +18,7 @@ class CustomCartType2 extends StatelessWidget {
       child: Column(children: [
         FadeInImage(
           image: NetworkImage(imageUrl),
-          placeholder: const AssetImage('assets/jar-loading.gif'),
+          placeholder: const AssetImage('lib/assets/jar-loading.gif'),
           width: double.infinity,
           height: 230,
           fit: BoxFit.cover,

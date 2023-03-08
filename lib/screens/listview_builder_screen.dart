@@ -21,11 +21,12 @@ class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
       // print('${scrollController.position.pixels}, ${scrollController.position.maxScrollExtent}');
       if ((scrollController.position.pixels + 500) >=
           scrollController.position.maxScrollExtent) {
-        // add5();
+        add5();
       }
     });
   }
 
+  // Promesa para que al momento de llegar al final aparescan 5 cartas más, y aparesca animacion de cargando
   Future fetchData() async {
     if (isLoading) return;
 
@@ -49,6 +50,7 @@ class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
     );
   }
 
+  //Agregar 5 imagenes más
   void add5() {
     final lastId = imagesIds.last;
     imagesIds.addAll(
@@ -57,6 +59,7 @@ class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
     setState(() {});
   }
 
+  // Promesa para que al momento de llegar al inicio de nuevo, se borren las fotos que se habian cargado anteriormente, aparte de las 5 principales
   Future<void> onRefresh() async {
     await Future.delayed(const Duration(seconds: 2));
     final lastId = imagesIds.last;
@@ -88,7 +91,7 @@ class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
                     width: double.infinity,
                     height: 300,
                     fit: BoxFit.cover,
-                    placeholder: const AssetImage('assets/jar-loading.gif'),
+                    placeholder: const AssetImage('lib/assets/jar-loading.gif'),
                     image: NetworkImage(
                         'https://picsum.photos/500/300?image=${imagesIds[index]}'),
                   );
@@ -108,6 +111,7 @@ class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
   }
 }
 
+//animación de cargando
 class _LoadingIcon extends StatelessWidget {
   const _LoadingIcon({
     super.key,

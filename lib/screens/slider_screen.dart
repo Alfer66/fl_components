@@ -63,7 +63,8 @@ class _SliderScreenState extends State<SliderScreen> {
           const AboutListTile(),
           Expanded(
             child: SingleChildScrollView(
-              child: Image(
+              child: FadeInImage(
+                placeholder: const AssetImage('lib/assets/jar-loading.gif'),
                 image: const NetworkImage(
                     'https://upload.wikimedia.org/wikipedia/commons/8/8a/Golden_Retriever_9-year_old.jpg'),
                 fit: BoxFit.contain,
